@@ -14,9 +14,13 @@ def init():
     global model, device
     
     model_path = Model.get_model_path('mnist-AutoML')
-    model = joblib.load(model_path)
+    #model = joblib.load(model_path)
     
     device = torch.device('cpu')
+    
+    model.load_state_dict(torch.load(model_path, map_location=device), strict=False)
+    model.to(device)
+    model.eval()
     
 def run(raw_data):
     prev_time = time.time()
