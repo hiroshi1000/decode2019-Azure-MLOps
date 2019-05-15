@@ -10,10 +10,12 @@ import torch.nn.functional as F
 from azureml.core.model import Model
 
 def init():
-    global model
+    global model, device
     
     model_path = Model.get_model_path('mnist-AutoML')
     model = joblib.load(model_path)
+    
+    device = torch.device('cpu')
     
 def run(raw_data):
     prev_time = time.time()
