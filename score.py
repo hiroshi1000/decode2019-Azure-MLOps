@@ -30,11 +30,8 @@ class CNN(nn.Module):
 
 def init():
     global model, device
-
-    try:
-        model_path = Model.get_model_path('PyTorchMNIST')
-    except:
-        model_path = 'outputs/model.pth'
+    
+    model_path = Model.get_model_path('mnist-AutoML')
 
     device = torch.device('cpu')
 

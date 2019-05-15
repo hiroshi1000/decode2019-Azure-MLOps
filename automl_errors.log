@@ -195,3 +195,208 @@
 2019-05-15 02:39:30,881 - INFO - 195 : child memory usage 210368
 2019-05-15 02:39:30,932 - INFO - 195 : cpu time 10.374821
 2019-05-15 02:39:30,975 - INFO - 195 : child cpu time 0.192854
+2019-05-15 05:32:34,346 - INFO - 195 : Starting usage telemetry collection
+2019-05-15 05:32:35,335 - INFO - 195 : Start creating parent run with DTO:  - name: AutoML_Demo_Experiment_1557898354.230591
+ - subscription_id: cd5e54ba-5b64-4acb-8ae5-72654d870add
+ - region: southcentralus
+ - compute_target: decode2019-MLOps
+ - spark_context: None
+ - spark_service: None
+ - iterations: 1
+ - primary_metric: AUC_weighted
+ - task_type: classification
+ - validation_size: 0.0
+ - n_cross_validations: 5
+ - y_min: None
+ - y_max: None
+ - num_classes: None
+ - preprocess: False
+ - lag_length: 0
+ - is_timeseries: False
+ - max_cores_per_iteration: 1
+ - max_concurrent_iterations: 10
+ - iteration_timeout_minutes: 10
+ - mem_in_mb: None
+ - enforce_time_on_windows: False
+ - experiment_timeout_minutes: None
+ - experiment_exit_score: None
+ - whitelist_models: None
+ - blacklist_algos: ['XGBoostClassifier', 'XGBoostClassifier']
+ - auto_blacklist: True
+ - blacklist_samples_reached: False
+ - exclude_nan_labels: True
+ - verbosity: 20
+ - show_warnings: False
+ - model_explainability: False
+ - service_url: None
+ - sdk_url: None
+ - sdk_packages: None
+ - enable_onnx_compatible_models: False
+ - enable_feature_sweeping: True
+ - telemetry_verbosity: INFO
+ - send_telemetry: True
+ - enable_early_stopping: False
+ - early_stopping_n_iters: 10
+ - metrics: None
+ - enable_ensembling: False
+ - enable_stack_ensembling: False
+ - ensemble_iterations: None
+ - enable_tf: False
+ - enable_cache: True
+ - enable_subsampling: False
+ - subsample_seed: None
+ - cost_mode: 0
+ - metric_operation: maximize.
+2019-05-15 05:32:35,803 - INFO - 195 : [ParentRunID:AutoML_5657eb12-b33a-42ff-bad4-167797613457] Remote run using user script.
+2019-05-15 05:32:36,456 - INFO - 195 : [RunId:AutoML_5657eb12-b33a-42ff-bad4-167797613457]SDK dependencies versions:{"azureml-widgets": "1.0.33", "azureml-train": "1.0.33", "azureml-train-restclients-hyperdrive": "1.0.33", "azureml-train-core": "1.0.33", "azureml-train-automl": "1.0.33", "azureml-telemetry": "1.0.33", "azureml-sdk": "1.0.33", "azureml-pipeline": "1.0.33", "azureml-pipeline-steps": "1.0.33", "azureml-pipeline-core": "1.0.33", "azureml-explain-model": "1.0.33", "azureml-dataprep": "1.1.2", "azureml-dataprep-native": "12.0.1", "azureml-core": "1.0.33.1", "azureml-contrib-opendatasets": "1.0.33", "azureml-contrib-notebook": "1.0.33"}.
+2019-05-15 05:32:36,575 - INFO - 195 : Parent Run ID: AutoML_5657eb12-b33a-42ff-bad4-167797613457
+2019-05-15 05:32:43,042 - INFO - 195 : Snapshotted folder: automl with snapshot_id: 4828886a-09bd-4c43-9684-4c47090ebdca
+2019-05-15 05:32:43,068 - INFO - 195 : Starting a snapshot run (snapshotId : 4828886a-09bd-4c43-9684-4c47090ebdca) with following compute definition: {'Configuration': {'script': 'train.py', 'arguments': [], 'target': 'decode2019-MLOps', 'framework': 'Python', 'communicator': 'None', 'autoPrepareEnvironment': True, 'maxRunDurationSeconds': None, 'nodeCount': 1, 'environment': {'name': None, 'version': None, 'environmentVariables': {'EXAMPLE_ENV_VAR': 'EXAMPLE_VALUE'}, 'python': {'userManagedDependencies': False, 'interpreterPath': 'python', 'baseCondaEnvironment': None, 'condaDependencies': ordereddict([('name', 'project_environment'), ('dependencies', ['python=3.6.2', ordereddict([('pip', ['azureml-defaults==1.0.33', 'azureml-train-automl==1.0.33', 'azureml-explain-model'])]), 'numpy'])])}, 'docker': {'enabled': False, 'baseImage': 'mcr.microsoft.com/azureml/base:intelmpi2018.3-ubuntu16.04', 'sharedVolumes': True, 'gpuSupport': False, 'shmSize': '1g', 'arguments': [], 'baseImageRegistry': {'address': None, 'username': None, 'password': None}}, 'spark': {'repositories': ['https://mmlspark.azureedge.net/maven'], 'packages': [{'group': 'com.microsoft.ml.spark', 'artifact': 'mmlspark_2.11', 'version': '0.12'}], 'precachePackages': True}, 'databricks': {'mavenLibraries': [], 'pypiLibraries': [], 'rcranLibraries': [], 'jarLibraries': [], 'eggLibraries': []}}, 'history': {'outputCollection': True, 'snapshotProject': True, 'directoriesToWatch': ['logs']}, 'spark': {'configuration': {'spark.app.name': 'Azure ML Experiment', 'spark.yarn.maxAppAttempts': 1}}, 'hdi': {'yarnDeployMode': 'cluster'}, 'tensorflow': {'workerCount': 1, 'parameterServerCount': 1}, 'mpi': {'processCountPerNode': 1}, 'dataReferences': {}, 'sourceDirectoryDataStore': None, 'amlcompute': {'vmSize': None, 'vmPriority': None, 'retainCluster': False, 'name': None, 'clusterMaxNodeCount': 1}}}
+2019-05-15 05:32:44,355 - INFO - 195 : memory usage 210924
+2019-05-15 05:32:44,366 - INFO - 195 : child memory usage 210952
+2019-05-15 05:32:44,447 - INFO - 195 : cpu time 10.739454
+2019-05-15 05:32:44,488 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:32:54,693 - INFO - 195 : memory usage 212984
+2019-05-15 05:32:54,715 - INFO - 195 : child memory usage 210952
+2019-05-15 05:32:54,759 - INFO - 195 : cpu time 10.768972
+2019-05-15 05:32:54,800 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:04,863 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:04,884 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:04,954 - INFO - 195 : cpu time 10.955098
+2019-05-15 05:33:04,991 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:15,043 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:15,062 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:15,109 - INFO - 195 : cpu time 11.0412
+2019-05-15 05:33:15,156 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:25,430 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:25,453 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:25,507 - INFO - 195 : cpu time 11.121302
+2019-05-15 05:33:25,582 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:35,641 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:35,662 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:35,714 - INFO - 195 : cpu time 11.244498
+2019-05-15 05:33:35,762 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:45,806 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:45,833 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:45,888 - INFO - 195 : cpu time 11.321532
+2019-05-15 05:33:45,957 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:33:56,007 - INFO - 195 : memory usage 212984
+2019-05-15 05:33:56,034 - INFO - 195 : child memory usage 210952
+2019-05-15 05:33:56,081 - INFO - 195 : cpu time 11.403085
+2019-05-15 05:33:56,128 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:06,174 - INFO - 195 : memory usage 213452
+2019-05-15 05:34:06,206 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:06,269 - INFO - 195 : cpu time 11.507304
+2019-05-15 05:34:06,315 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:16,383 - INFO - 195 : memory usage 214376
+2019-05-15 05:34:16,404 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:16,613 - INFO - 195 : cpu time 11.615723
+2019-05-15 05:34:16,668 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:26,711 - INFO - 195 : memory usage 215324
+2019-05-15 05:34:26,734 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:26,784 - INFO - 195 : cpu time 11.678738
+2019-05-15 05:34:26,835 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:36,893 - INFO - 195 : memory usage 217396
+2019-05-15 05:34:36,922 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:36,976 - INFO - 195 : cpu time 11.780546
+2019-05-15 05:34:37,021 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:47,077 - INFO - 195 : memory usage 217400
+2019-05-15 05:34:47,099 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:47,152 - INFO - 195 : cpu time 11.888571
+2019-05-15 05:34:47,219 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:34:57,376 - INFO - 195 : memory usage 217400
+2019-05-15 05:34:57,403 - INFO - 195 : child memory usage 210952
+2019-05-15 05:34:57,438 - INFO - 195 : cpu time 11.991759
+2019-05-15 05:34:57,475 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:07,516 - INFO - 195 : memory usage 217400
+2019-05-15 05:35:07,536 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:07,576 - INFO - 195 : cpu time 12.114665
+2019-05-15 05:35:07,652 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:17,697 - INFO - 195 : memory usage 217400
+2019-05-15 05:35:17,719 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:17,861 - INFO - 195 : cpu time 12.192536
+2019-05-15 05:35:17,917 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:28,008 - INFO - 195 : memory usage 217400
+2019-05-15 05:35:28,031 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:28,103 - INFO - 195 : cpu time 12.291295
+2019-05-15 05:35:28,173 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:38,236 - INFO - 195 : memory usage 218228
+2019-05-15 05:35:38,256 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:38,306 - INFO - 195 : cpu time 12.412988
+2019-05-15 05:35:38,364 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:48,414 - INFO - 195 : memory usage 219016
+2019-05-15 05:35:48,435 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:48,483 - INFO - 195 : cpu time 12.517892
+2019-05-15 05:35:48,535 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:35:58,593 - INFO - 195 : memory usage 219016
+2019-05-15 05:35:58,619 - INFO - 195 : child memory usage 210952
+2019-05-15 05:35:58,663 - INFO - 195 : cpu time 12.613871
+2019-05-15 05:35:58,713 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:08,755 - INFO - 195 : memory usage 219016
+2019-05-15 05:36:08,780 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:08,860 - INFO - 195 : cpu time 12.724733
+2019-05-15 05:36:08,897 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:18,951 - INFO - 195 : memory usage 219016
+2019-05-15 05:36:18,981 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:19,051 - INFO - 195 : cpu time 12.816112
+2019-05-15 05:36:19,089 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:29,141 - INFO - 195 : memory usage 219016
+2019-05-15 05:36:29,159 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:29,216 - INFO - 195 : cpu time 12.910646
+2019-05-15 05:36:29,276 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:39,335 - INFO - 195 : memory usage 219016
+2019-05-15 05:36:39,356 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:39,483 - INFO - 195 : cpu time 13.006569
+2019-05-15 05:36:39,534 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:49,570 - INFO - 195 : memory usage 219016
+2019-05-15 05:36:49,593 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:49,633 - INFO - 195 : cpu time 13.113496
+2019-05-15 05:36:49,682 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:36:59,736 - INFO - 195 : memory usage 219020
+2019-05-15 05:36:59,755 - INFO - 195 : child memory usage 210952
+2019-05-15 05:36:59,848 - INFO - 195 : cpu time 13.207246
+2019-05-15 05:36:59,891 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:37:09,948 - INFO - 195 : memory usage 219028
+2019-05-15 05:37:09,981 - INFO - 195 : child memory usage 210952
+2019-05-15 05:37:10,043 - INFO - 195 : cpu time 13.33042
+2019-05-15 05:37:10,091 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:37:20,165 - INFO - 195 : memory usage 219036
+2019-05-15 05:37:20,193 - INFO - 195 : child memory usage 210952
+2019-05-15 05:37:20,249 - INFO - 195 : cpu time 13.434748
+2019-05-15 05:37:20,288 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:37:30,334 - INFO - 195 : memory usage 219036
+2019-05-15 05:37:30,358 - INFO - 195 : child memory usage 210952
+2019-05-15 05:37:30,402 - INFO - 195 : cpu time 13.551923
+2019-05-15 05:37:30,452 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:37:40,494 - INFO - 195 : memory usage 219040
+2019-05-15 05:37:40,517 - INFO - 195 : child memory usage 210952
+2019-05-15 05:37:40,593 - INFO - 195 : cpu time 13.650981999999999
+2019-05-15 05:37:40,656 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:37:50,707 - INFO - 195 : memory usage 219040
+2019-05-15 05:37:50,730 - INFO - 195 : child memory usage 210952
+2019-05-15 05:37:50,765 - INFO - 195 : cpu time 13.744824
+2019-05-15 05:37:50,810 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:00,851 - INFO - 195 : memory usage 219040
+2019-05-15 05:38:00,872 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:00,943 - INFO - 195 : cpu time 13.844084
+2019-05-15 05:38:00,992 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:11,035 - INFO - 195 : memory usage 219044
+2019-05-15 05:38:11,054 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:11,110 - INFO - 195 : cpu time 13.936957
+2019-05-15 05:38:11,172 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:21,227 - INFO - 195 : memory usage 219048
+2019-05-15 05:38:21,256 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:21,300 - INFO - 195 : cpu time 14.109814
+2019-05-15 05:38:21,340 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:31,389 - INFO - 195 : memory usage 219048
+2019-05-15 05:38:31,407 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:31,448 - INFO - 195 : cpu time 14.203506
+2019-05-15 05:38:31,495 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:41,536 - INFO - 195 : memory usage 219048
+2019-05-15 05:38:41,557 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:41,602 - INFO - 195 : cpu time 14.284743
+2019-05-15 05:38:41,702 - INFO - 195 : child cpu time 0.333123
+2019-05-15 05:38:51,759 - INFO - 195 : memory usage 219096
+2019-05-15 05:38:51,778 - INFO - 195 : child memory usage 210952
+2019-05-15 05:38:51,824 - INFO - 195 : cpu time 14.416052
+2019-05-15 05:38:51,869 - INFO - 195 : child cpu time 0.333123
