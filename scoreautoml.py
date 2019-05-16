@@ -7,7 +7,8 @@ import torch.nn as nn
 from io import StringIO
 import torch.nn.functional as F
 import joblib
-from torchvision import transforms
+#from torchvision import transforms
+import azureml.train.automl
 
 from azureml.core.model import Model
 
@@ -33,12 +34,12 @@ class CNN(nn.Module):
 def init():
     global model
     
-    model_path = Model.get_model_path('mnist-AutoML')
-    model = torch.load(model_path, map_location=lambda storage, loc: storage)
-    model.eval()
-    
     #model_path = Model.get_model_path('mnist-AutoML')
-    #model = joblib.load(model_path)
+    #model = torch.load(model_path, map_location=lambda storage, loc: storage)
+    #model.eval()
+    
+    model_path = Model.get_model_path('mnist-AutoML')
+    model = joblib.load(model_path)
     
     #device = torch.device('cpu')
     
