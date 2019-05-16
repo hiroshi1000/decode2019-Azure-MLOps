@@ -23,7 +23,7 @@ def run(raw_data):
 
     # run model
     with torch.no_grad():
-        x = torch.from_numpy(image).float().to(device)
+        x = torch.from_numpy(image).float()
         pred = model(x).detach().numpy()[0]
 
     # get timing
