@@ -11,6 +11,26 @@ def init():
     model = joblib.load(model_path)
 
 def run(raw_data):
-    data = np.array(json.loads(raw_data)['data'])
-    y_hat = model.predict(data)
-    return y_hat.tolist()
+    prev_time = time.time()
+          
+    post = json.loads(raw_data)
+
+    # load and normalize image
+    image = np.loadtxt(StringIO(post['image']), delimiter=',') / 255.
+
+    # run model
+    with torch.no_grad():
+        x = torch.from_numpy(image).float().to(device)
+        pred = model(x).detach().numpy()[0]
+
+    # get timing
+    current_time = time.time()
+    inference_time = datetime.timedelta(seconds=current_time - prev_time)
+
+    payload = {
+        'time': inference_time.total_seconds(),
+        'prediction': int(np.argmax(pred)),
+        'scores': pred.tolist()
+    }
+
+    return payload
