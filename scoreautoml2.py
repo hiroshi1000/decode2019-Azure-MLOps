@@ -9,9 +9,10 @@ from azureml.core.model import Model
 import azureml.train.automl
 
 def init():
-    global model
+    global model, device
     model_path = Model.get_model_path('mnist-AutoML')
     model = joblib.load(model_path)
+    device = torch.device('cpu')
 
 def run(raw_data):
     prev_time = time.time()
@@ -23,7 +24,7 @@ def run(raw_data):
 
     # run model
     with torch.no_grad():
-        x = torch.from_numpy(image).float()
+        x = torch.from_numpy(image).float().to(device)
         pred = model(x).detach().numpy()[0]
 
     # get timing

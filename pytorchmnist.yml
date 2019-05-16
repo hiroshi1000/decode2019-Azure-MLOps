@@ -16,5 +16,4 @@ dependencies:
   - numpy
   - torch
   - joblib
-  - torchvision
-  - azureml-train-automl
+  - azureml-sdk[automl]

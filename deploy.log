@@ -1,0 +1,25 @@
+2019-05-16T12:26:04,200032304+00:00 - iot-server/run 
+2019-05-16T12:26:04,200751408+00:00 - rsyslog/run 
+2019-05-16T12:26:04,201359712+00:00 - gunicorn/run 
+2019-05-16T12:26:04,205462137+00:00 - nginx/run 
+EdgeHubConnectionString and IOTEDGE_IOTHUBHOSTNAME are not set. Exiting...
+2019-05-16T12:26:04,343781289+00:00 - iot-server/finish 1 0
+2019-05-16T12:26:04,344796695+00:00 - Exit code 1 is normal. Not restarting iot-server.
+Starting gunicorn 19.6.0
+Listening at: http://127.0.0.1:9090 (15)
+Using worker: sync
+worker timeout is set to 300
+Booting worker with pid: 48
+'pattern' package not found; tag filters are not available for English
+Initializing logger
+Starting up app insights client
+Starting up request id generator
+Starting up app insight hooks
+Invoking user's init function
+2019-05-16 12:26:11,478 | azureml.core.run | DEBUG | Could not load run context Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run., switching offline: False
+2019-05-16 12:26:11,479 | azureml.core.run | DEBUG | Could not load the run context and allow_offline set to False
+2019-05-16 12:26:11,479 | azureml.core.model | DEBUG | RunEnvironmentException: Could not load a submitted run, if outside of an execution context, use experiment.start_logging to initialize an azureml.core.Run.
+2019-05-16 12:26:11,479 | azureml.core.model | DEBUG | version is None. Latest version is 1
+2019-05-16 12:26:11,479 | azureml.core.model | DEBUG | Found model path at azureml-models/mnist-AutoML/1/model.pkl
+Users's init has completed successfully
+Scoring timeout setting is not found. Use default timeout: 3600000 ms

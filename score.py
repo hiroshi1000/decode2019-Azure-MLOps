@@ -75,4 +75,5 @@ if __name__ == "__main__":
     }
 
     init()
-    out = run(json.dum
+    out = run(json.dumps(data))
+    print(out)
