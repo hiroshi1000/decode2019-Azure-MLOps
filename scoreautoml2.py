@@ -2,6 +2,7 @@ import json
 import time
 import torch
 import numpy as np
+from io import StringIO
 
 import joblib
 from azureml.core.model import Model
